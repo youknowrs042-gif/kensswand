@@ -1,7 +1,13 @@
 #!/usr/bin/env python3
 """
-Network View Diagram ala ATLAS.ti - Output PDF & SVG
-Compact, structured layout for thesis appendix.
+Network View Diagram - ATLAS.ti authentic style
+Outputs: PDF (A3 Landscape) ready for thesis appendix
+
+Visual style:
+- All nodes are rounded rectangles (like ATLAS.ti)
+- Color-coded by theme group
+- Connector lines with relationship labels on the line
+- Clean, organic layout without overlap
 """
 import math
 import sys
@@ -9,89 +15,108 @@ sys.path.insert(0, '.')
 from pdf_writer import PDFWriter
 
 # ============================================================
-# DATA
+# DATA: Themes -> Axial Codes -> Representative Open Codes
 # ============================================================
 
 themes_data = [
     {
         "id": "T1",
-        "label": "Keterbatasan Sistem\nPencatatan Perilaku Siswa\nyang Berjalan",
-        "color": (1.0, 0.95, 0.7),
-        "border": (0.7, 0.55, 0.05),
+        "label": "Keterbatasan Sistem Pencatatan\nPerilaku Siswa yang Berjalan",
+        "color": (1.0, 0.92, 0.55),       # warm yellow
+        "border": (0.78, 0.65, 0.0),
         "axial": [
             {"label": "Pencatatan perilaku\nberbasis manual",
-             "codes": ["Pencatatan manual", "Buku absensi/jurnal", "Buku anekdot",
-                       "Guru kelas PJ utama", "Data perilaku belum digital"]},
+             "codes": ["Pencatatan manual", "Buku absensi/jurnal",
+                       "Buku anekdot", "Guru kelas PJ utama",
+                       "Data perilaku belum digital"]},
             {"label": "Format pencatatan\ntidak terstandar",
              "codes": ["Format tidak seragam", "Bergantung kebiasaan guru",
                        "Format tidak baku", "Keterlambatan belum detail"]},
             {"label": "Keterbatasan dokumentasi\nperilaku positif & prestasi",
-             "codes": ["Perilaku positif belum\nterdokumentasi", "Belum ada tempat\nkhusus perilaku positif",
+             "codes": ["Perilaku positif belum\nterdokumentasi",
+                       "Belum ada tempat khusus\nperilaku positif",
                        "Fokus pelanggaran"]},
             {"label": "Kesulitan pengelolaan\ndan pencarian data",
-             "codes": ["Data tersebar", "Data sulit dicari", "Data rawan hilang/rusak",
-                       "Rekapitulasi lama"]},
+             "codes": ["Data tersebar", "Data sulit dicari",
+                       "Data rawan hilang/rusak", "Rekapitulasi lama"]},
         ]
     },
     {
         "id": "T2",
-        "label": "Ketidakefisienan Alur\nPelaporan dan Komunikasi",
-        "color": (0.82, 0.93, 1.0),
+        "label": "Ketidakefisienan Alur Pelaporan\ndan Komunikasi",
+        "color": (0.73, 0.88, 1.0),       # light blue
         "border": (0.14, 0.44, 0.64),
         "axial": [
             {"label": "Alur pelaporan\ntidak efisien",
-             "codes": ["Alur pelaporan konvensional", "Pengawasan manajerial\nkurang praktis",
+             "codes": ["Alur pelaporan konvensional",
+                       "Pengawasan manajerial\nkurang praktis",
                        "Data tidak terpusat", "Pelaporan situasional"]},
             {"label": "Komunikasi orang tua\nbersifat insidental",
-             "codes": ["Komunikasi orang tua\nmanual", "Informasi terlambat\nke orang tua",
-                       "Notifikasi orang tua\nperlu diatur", "Kendala komunikasi\ndengan orang tua"]},
+             "codes": ["Komunikasi orang tua manual",
+                       "Informasi terlambat\nke orang tua",
+                       "Notifikasi perlu diatur",
+                       "Kendala komunikasi\norang tua"]},
         ]
     },
     {
         "id": "T3",
-        "label": "Penghargaan & Pembinaan\nKarakter Belum\nTerdokumentasi Sistematis",
-        "color": (0.84, 0.96, 0.88),
+        "label": "Penghargaan & Pembinaan Karakter\nBelum Terdokumentasi Sistematis",
+        "color": (0.75, 0.94, 0.80),       # soft green
         "border": (0.12, 0.52, 0.29),
         "axial": [
             {"label": "Penghargaan belum\nterstruktur",
-             "codes": ["Penghargaan sederhana", "Penghargaan belum\nterdokumentasi",
-                       "Reward spontan", "Penghargaan terstruktur\nbelum berjalan"]},
-            {"label": "Pembinaan karakter\nmelalui pembiasaan harian",
-             "codes": ["Pembinaan karakter harian", "Teguran bertahap",
-                       "Tindak lanjut belum\nterdokumentasi", "Rekam jejak\npembinaan penting",
+             "codes": ["Penghargaan sederhana",
+                       "Penghargaan belum\nterdokumentasi",
+                       "Reward spontan",
+                       "Penghargaan terstruktur\nbelum berjalan"]},
+            {"label": "Pembinaan karakter melalui\npembiasaan harian",
+             "codes": ["Pembinaan karakter harian",
+                       "Teguran bertahap",
+                       "Tindak lanjut belum\nterdokumentasi",
+                       "Rekam jejak pembinaan\npenting",
                        "Pembinaan melalui\npembiasaan"]},
         ]
     },
     {
         "id": "T4",
-        "label": "Kebutuhan Fitur & Fungsi\nSistem Informasi\nBerbasis Website",
-        "color": (0.99, 0.92, 0.88),
+        "label": "Kebutuhan Fitur & Fungsi Sistem\nInformasi Berbasis Website",
+        "color": (1.0, 0.85, 0.78),       # salmon
         "border": (0.75, 0.22, 0.17),
         "axial": [
             {"label": "Kebutuhan fitur dan\nfungsi sistem informasi",
-             "codes": ["Kebutuhan fitur lengkap", "Kebutuhan rekap otomatis",
-                       "Kebutuhan pencatatan cepat", "Sistem poin otomatis",
-                       "Kebutuhan fitur pencarian", "Kebutuhan laporan otomatis",
-                       "Pembagian akses pengguna", "Kebutuhan keamanan data",
+             "codes": ["Kebutuhan fitur lengkap",
+                       "Kebutuhan rekap otomatis",
+                       "Kebutuhan pencatatan cepat",
+                       "Sistem poin otomatis",
+                       "Kebutuhan fitur pencarian",
+                       "Kebutuhan laporan otomatis",
+                       "Pembagian akses pengguna",
+                       "Kebutuhan keamanan data",
                        "Tampilan sederhana"]},
         ]
     },
     {
         "id": "T5",
-        "label": "Kesiapan, Tantangan,\ndan Dukungan\nImplementasi Sistem",
-        "color": (0.91, 0.85, 0.93),
+        "label": "Kesiapan, Tantangan, dan Dukungan\nImplementasi Sistem",
+        "color": (0.87, 0.80, 0.93),       # lavender
         "border": (0.42, 0.20, 0.51),
         "axial": [
             {"label": "Ketersediaan infrastruktur\ndan kesiapan teknis",
-             "codes": ["Internet tersedia\ntapi fluktuatif", "Perangkat tersedia",
-                       "Literasi teknologi\nguru bervariasi", "Belum pernah pakai\naplikasi khusus"]},
+             "codes": ["Internet tersedia tapi fluktuatif",
+                       "Perangkat tersedia",
+                       "Literasi teknologi guru\nbervariasi",
+                       "Belum pernah pakai\naplikasi khusus"]},
             {"label": "Kekhawatiran & hambatan\nimplementasi",
-             "codes": ["Kekhawatiran kesiapan guru", "Kekhawatiran jaringan\ninternet",
-                       "Hambatan kebiasaan manual", "Kemampuan teknologi\ntidak merata"]},
+             "codes": ["Kekhawatiran kesiapan guru",
+                       "Kekhawatiran jaringan internet",
+                       "Hambatan kebiasaan manual",
+                       "Kemampuan teknologi\ntidak merata"]},
             {"label": "Dukungan dan\nkesiapan sekolah",
-             "codes": ["Dukungan thd sistem website", "Dukungan sekolah",
-                       "Implementasi bertahap", "Dukungan teknis operator",
-                       "Sistem diterima jika\nsederhana"]},
+             "codes": ["Dukungan thd sistem website",
+                       "Dukungan sekolah",
+                       "Implementasi bertahap",
+                       "Dukungan teknis operator",
+                       "Sistem diterima jika sederhana"]},
         ]
     },
 ]
@@ -105,130 +130,124 @@ inter_theme_links = [
 ]
 
 # ============================================================
-# LAYOUT HELPERS
+# HELPERS
 # ============================================================
 
-def hex_to_rgb(h):
-    h = h.lstrip('#')
-    return tuple(int(h[i:i+2], 16)/255 for i in (0,2,4))
-
-def text_width(text, size, bold=False):
-    factor = 0.48 if bold else 0.45
+def node_size(text, fs, px=10, py=6):
     lines = text.split('\n')
-    return max(len(l) for l in lines) * size * factor
+    cw = fs * 0.47
+    w = max(len(l) for l in lines) * cw + px * 2
+    h = len(lines) * fs * 1.25 + py * 2
+    return max(w, 70), max(h, 18)
 
-def text_height(text, size):
-    lines = text.split('\n')
-    return len(lines) * size * 1.3
-
-def node_size(text, fs, pad_x=12, pad_y=8):
-    w = text_width(text, fs, True) + pad_x * 2
-    h = text_height(text, fs) + pad_y * 2
-    return max(w, 80), max(h, 24)
-
-def edge_point(cx, cy, w, h, tx, ty, shape="rect"):
+def edge_pt(cx, cy, w, h, tx, ty):
     dx, dy = tx - cx, ty - cy
     if dx == 0 and dy == 0:
         return cx, cy
-    if shape == "ellipse":
-        a = math.atan2(dy, dx)
-        return cx + (w/2)*math.cos(a), cy + (h/2)*math.sin(a)
     hw, hh = w/2, h/2
     if dx == 0:
         return cx, cy + (hh if dy > 0 else -hh)
     if dy == 0:
         return cx + (hw if dx > 0 else -hw), cy
-    sx = hw / abs(dx)
-    sy = hh / abs(dy)
-    s = min(sx, sy)
+    s = min(hw/abs(dx), hh/abs(dy))
     return cx + dx*s, cy + dy*s
 
 # ============================================================
-# GENERATE PDF - A3 Landscape (compact layout)
+# PDF GENERATION - A3 Landscape
 # ============================================================
 
-# A3 landscape in points: 1190.55 x 841.89
-PAGE_W = 1190.55
-PAGE_H = 841.89
+PW = 1190.55  # A3 width in pt
+PH = 841.89   # A3 height in pt
 
-pdf = PDFWriter(PAGE_W, PAGE_H)
+pdf = PDFWriter(PW, PH)
 
-# Background
-pdf.set_color(0.98, 0.98, 0.98)
-pdf.draw_rect(0, 0, PAGE_W, PAGE_H, fill=True, stroke=False)
+# White background
+pdf.set_color(1, 1, 1)
+pdf.draw_rect(0, 0, PW, PH, fill=True, stroke=False)
 
 # Title
-pdf.set_color(0.17, 0.24, 0.31)
-pdf.draw_text_centered(PAGE_W/2, 28, "NETWORK VIEW DIAGRAM", size=14, bold=True)
-pdf.set_color(0.33, 0.33, 0.33)
-pdf.draw_text_centered(PAGE_W/2, 44, "Koding Wawancara Kualitatif: Pengembangan Sistem Informasi Pemantauan Perilaku Siswa", size=8)
-pdf.draw_text_centered(PAGE_W/2, 54, "Berbasis Website dalam Mendukung Manajemen Pembinaan Karakter di Sekolah Dasar", size=8)
-
-# Legend (top-left)
-lx, ly = 15, 22
-pdf.set_color(1, 1, 1)
-pdf.set_stroke_color(0.8, 0.8, 0.8)
-pdf.set_line_width(0.5)
-pdf.draw_rounded_rect(lx, ly, 180, 50, 4, fill=True, stroke=True)
-pdf.set_color(0.17, 0.24, 0.31)
-pdf.draw_text(lx+5, ly+12, "LEGENDA", size=7, bold=True)
-# Theme ellipse
-pdf.set_color(1.0, 0.95, 0.7)
-pdf.set_stroke_color(0.4, 0.4, 0.4)
-pdf.set_line_width(0.8)
-pdf.draw_ellipse(lx+15, ly+28, 10, 6, fill=True, stroke=True)
-pdf.set_color(0.17, 0.24, 0.31)
-pdf.draw_text(lx+30, ly+30, "= Tema", size=6)
-# Axial box
-pdf.set_color(0.91, 0.96, 0.99)
-pdf.set_stroke_color(0.16, 0.50, 0.73)
-pdf.draw_rounded_rect(lx+70, ly+23, 18, 10, 2, fill=True, stroke=True)
-pdf.set_color(0.17, 0.24, 0.31)
-pdf.draw_text(lx+92, ly+30, "= Axial Code", size=6)
-# Open code pill
-pdf.set_color(1, 1, 1)
-pdf.set_stroke_color(0.53, 0.53, 0.53)
-pdf.draw_rounded_rect(lx+5, ly+38, 18, 8, 4, fill=True, stroke=True)
-pdf.set_color(0.17, 0.24, 0.31)
-pdf.draw_text(lx+30, ly+44, "= Open Code", size=6)
-# Dashed line
-pdf.set_stroke_color(0.75, 0.22, 0.17)
-pdf.set_line_width(0.8)
-pdf.set_dash(3, 2)
-pdf.draw_line(lx+70, ly+42, lx+88, ly+42)
-pdf.clear_dash()
-pdf.set_color(0.17, 0.24, 0.31)
-pdf.draw_text(lx+92, ly+44, "= Hubungan antar Tema", size=6)
+pdf.set_color(0.15, 0.15, 0.15)
+pdf.draw_text_centered(PW/2, 22, "NETWORK VIEW", size=16, bold=True)
+pdf.set_color(0.3, 0.3, 0.3)
+pdf.draw_text_centered(PW/2, 38, "Pengembangan Sistem Informasi Pemantauan Perilaku Siswa Berbasis Website", size=8)
+pdf.draw_text_centered(PW/2, 49, "dalam Mendukung Manajemen Pembinaan Karakter di Sekolah Dasar", size=8)
 
 # ============================================================
-# THEME POSITIONS - Compact layout, 5 themes
+# POSITIONS - carefully laid out to prevent overlap
+# Theme nodes are central hubs, axial codes radiate out,
+# open codes radiate further out from axial codes.
+#
+# Layout zones (A3 Landscape):
+#   T1: top-left quadrant     (x: 80-450, y: 80-380)
+#   T2: top-right quadrant    (x: 740-1110, y: 80-380)
+#   T3: bottom-left quadrant  (x: 80-450, y: 490-780)
+#   T4: center                (x: 450-740, y: 300-550)
+#   T5: bottom-right quadrant (x: 740-1110, y: 490-780)
 # ============================================================
-
-# Usable area: x=30..1160, y=70..820
-# Layout: T1 top-left, T2 top-right, T3 bottom-left, T4 center, T5 bottom-right
 
 theme_pos = {
-    "T1": (230, 230),
-    "T2": (960, 230),
-    "T3": (230, 640),
-    "T4": (595, 470),
-    "T5": (960, 640),
+    "T1": (250, 210),
+    "T2": (940, 210),
+    "T3": (250, 650),
+    "T4": (595, 430),
+    "T5": (940, 650),
 }
 
-# Axial positions relative to theme (angle, distance)
-axial_layout = {
-    "T1": [(160, 140), (200, 140), (240, 140), (290, 140)],
-    "T2": [(340, 140), (20, 140)],
-    "T3": [(160, 140), (220, 140)],
-    "T4": [(270, 160)],
-    "T5": [(310, 140), (0, 140), (50, 140)],
+# Angles (degrees) and distances for axial codes from theme center
+axial_config = {
+    "T1": [(135, 130), (180, 130), (225, 130), (270, 130)],
+    "T2": [(0, 130), (315, 130)],
+    "T3": [(180, 130), (225, 130)],
+    "T4": [(270, 145)],
+    "T5": [(0, 130), (315, 130), (45, 130)],
 }
 
-theme_nodes = {}
-all_positions = []  # for overlap checking
+# Open code distance from axial
+OC_DIST = 68
+
+theme_nodes = {}  # tid -> (cx, cy, w, h)
+
+def draw_node(cx, cy, text, fs, px, py, fill_rgb, border_rgb, lw=0.8, bold=False):
+    """Draw an ATLAS.ti style rounded-rect node"""
+    w, h = node_size(text, fs, px, py)
+    pdf.save_state()
+    pdf.set_color(*fill_rgb)
+    pdf.set_stroke_color(*border_rgb)
+    pdf.set_line_width(lw)
+    r = min(4, h/4)
+    pdf.draw_rounded_rect(cx - w/2, cy - h/2, w, h, r, fill=True, stroke=True)
+    pdf.set_color(0.1, 0.1, 0.1)
+    pdf.draw_text_centered(cx, cy, text, size=fs, bold=bold)
+    pdf.restore_state()
+    return w, h
+
+def draw_link(x1, y1, x2, y2, label, color=(0.4, 0.4, 0.4), lw=0.5, dashed=False):
+    """Draw a link line with label in the middle (ATLAS.ti style)"""
+    pdf.save_state()
+    pdf.set_stroke_color(*color)
+    pdf.set_line_width(lw)
+    if dashed:
+        pdf.set_dash(3, 2)
+    pdf.draw_line(x1, y1, x2, y2)
+    if dashed:
+        pdf.clear_dash()
+    # Arrow at end
+    pdf.set_color(*color)
+    pdf.draw_arrow(x1, y1, x2, y2, size=3)
+    pdf.restore_state()
+    
+    # Label on line
+    mx, my = (x1+x2)/2, (y1+y2)/2
+    lbl_w = len(label) * 3.2 + 6
+    pdf.save_state()
+    pdf.set_color(1, 1, 1)
+    pdf.draw_rect(mx - lbl_w/2, my - 4.5, lbl_w, 8, fill=True, stroke=False)
+    pdf.set_color(*color)
+    pdf.draw_text_centered(mx, my, label, size=4.5)
+    pdf.restore_state()
 
 # ============================================================
-# DRAW
+# RENDER ALL NODES AND CONNECTIONS
 # ============================================================
 
 for theme in themes_data:
@@ -236,168 +255,127 @@ for theme in themes_data:
     tcx, tcy = theme_pos[tid]
     tc = theme["color"]
     tb = theme["border"]
-    tlabel = theme["label"]
     
-    # Theme ellipse
-    tw, th = node_size(tlabel, 8, 18, 10)
-    tw = max(tw, 140)
-    th = max(th, 40)
-    
-    pdf.save_state()
-    pdf.set_color(*tc)
-    pdf.set_stroke_color(*tb)
-    pdf.set_line_width(1.5)
-    pdf.draw_ellipse(tcx, tcy, tw/2, th/2, fill=True, stroke=True)
-    pdf.set_color(0.1, 0.1, 0.1)
-    pdf.draw_text_centered(tcx, tcy, tlabel, size=7, bold=True)
-    pdf.restore_state()
-    
+    # Draw theme node (larger, bold, colored)
+    tw, th = draw_node(tcx, tcy, theme["label"], 7.5, 14, 8, tc, tb, lw=1.2, bold=True)
     theme_nodes[tid] = (tcx, tcy, tw, th)
     
-    # Axial codes
-    layouts = axial_layout[tid]
+    configs = axial_config[tid]
     for ai, axial in enumerate(theme["axial"]):
-        if ai >= len(layouts):
+        if ai >= len(configs):
             break
-        angle_deg, dist = layouts[ai]
-        rad = math.radians(angle_deg)
+        ang_deg, dist = configs[ai]
+        rad = math.radians(ang_deg)
         acx = tcx + dist * math.cos(rad)
         acy = tcy + dist * math.sin(rad)
         
-        alabel = axial["label"]
-        aw, ah = node_size(alabel, 6.5, 10, 6)
-        aw = max(aw, 100)
-        ah = max(ah, 22)
+        # Draw axial node (medium, colored lighter)
+        lighter = tuple(min(1.0, c*0.3 + 0.7) for c in tc)
+        aw, ah = draw_node(acx, acy, axial["label"], 6, 8, 5,
+                           lighter, tb, lw=0.7, bold=True)
         
-        # Draw axial box
-        pdf.save_state()
-        pdf.set_color(0.91, 0.96, 0.99)
-        pdf.set_stroke_color(0.16, 0.50, 0.73)
-        pdf.set_line_width(0.8)
-        pdf.draw_rounded_rect(acx - aw/2, acy - ah/2, aw, ah, 3, fill=True, stroke=True)
-        pdf.set_color(0.12, 0.18, 0.27)
-        pdf.draw_text_centered(acx, acy, alabel, size=6, bold=True)
-        pdf.restore_state()
-        
-        # Connection theme -> axial
-        p1 = edge_point(tcx, tcy, tw, th, acx, acy, "ellipse")
-        p2 = edge_point(acx, acy, aw, ah, tcx, tcy, "rect")
-        pdf.save_state()
-        pdf.set_stroke_color(0.16, 0.50, 0.73)
-        pdf.set_line_width(0.7)
-        pdf.draw_line(p1[0], p1[1], p2[0], p2[1])
-        pdf.set_color(0.16, 0.50, 0.73)
-        pdf.draw_arrow(p1[0], p1[1], p2[0], p2[1], size=3)
-        pdf.restore_state()
-        # "is part of" label
-        mx, my = (p1[0]+p2[0])/2, (p1[1]+p2[1])/2
-        pdf.save_state()
-        pdf.set_color(1, 1, 1)
-        pdf.draw_rect(mx-18, my-5, 36, 9, fill=True, stroke=False)
-        pdf.set_color(0.16, 0.50, 0.73)
-        pdf.draw_text_centered(mx, my, "is part of", size=4.5)
-        pdf.restore_state()
+        # Link theme -> axial
+        p1 = edge_pt(tcx, tcy, tw, th, acx, acy)
+        p2 = edge_pt(acx, acy, aw, ah, tcx, tcy)
+        draw_link(p1[0], p1[1], p2[0], p2[1], "is part of",
+                  color=tb, lw=0.6)
         
         # Open codes around axial
         codes = axial["codes"]
-        num_codes = len(codes)
+        nc = len(codes)
         base_dir = math.atan2(acy - tcy, acx - tcx)
         
-        if num_codes <= 3:
-            spread = math.pi * 0.55
-        elif num_codes <= 5:
-            spread = math.pi * 0.7
-        else:
-            spread = math.pi * 0.85
+        # Fan spread
+        spread = math.pi * (0.5 if nc <= 3 else 0.65 if nc <= 5 else 0.8)
         
-        oc_radius = 75 + (num_codes > 5) * 15
-        
-        for ci, code_text in enumerate(codes):
-            if num_codes == 1:
-                c_angle = base_dir
+        for ci, ct in enumerate(codes):
+            if nc == 1:
+                ca = base_dir
             else:
-                c_angle = base_dir - spread/2 + spread * ci / (num_codes - 1)
+                ca = base_dir - spread/2 + spread * ci / (nc - 1)
             
-            r = oc_radius + (ci % 2) * 12
-            ocx = acx + r * math.cos(c_angle)
-            ocy = acy + r * math.sin(c_angle)
+            r = OC_DIST + (ci % 2) * 10
+            ocx = acx + r * math.cos(ca)
+            ocy = acy + r * math.sin(ca)
             
-            ow, oh = node_size(code_text, 5.5, 8, 4)
-            ow = max(ow, 65)
-            oh = max(oh, 15)
+            # Draw open code node (small, white/light gray)
+            ow, oh = draw_node(ocx, ocy, ct, 5, 6, 3,
+                               (1.0, 1.0, 1.0), (0.6, 0.6, 0.6), lw=0.4)
             
-            # Draw pill
-            pdf.save_state()
-            pdf.set_color(1, 1, 1)
-            pdf.set_stroke_color(0.6, 0.6, 0.6)
-            pdf.set_line_width(0.4)
-            pdf.draw_rounded_rect(ocx - ow/2, ocy - oh/2, ow, oh, oh/2, fill=True, stroke=True)
-            pdf.set_color(0.2, 0.2, 0.2)
-            pdf.draw_text_centered(ocx, ocy, code_text, size=5)
-            pdf.restore_state()
-            
-            # Connection axial -> open
-            p1 = edge_point(acx, acy, aw, ah, ocx, ocy, "rect")
-            p2 = edge_point(ocx, ocy, ow, oh, acx, acy, "rect")
+            # Link axial -> open code
+            p1 = edge_pt(acx, acy, aw, ah, ocx, ocy)
+            p2 = edge_pt(ocx, ocy, ow, oh, acx, acy)
             pdf.save_state()
             pdf.set_stroke_color(0.7, 0.7, 0.7)
-            pdf.set_line_width(0.4)
+            pdf.set_line_width(0.3)
             pdf.draw_line(p1[0], p1[1], p2[0], p2[1])
             pdf.restore_state()
 
 # ============================================================
-# INTER-THEME CONNECTIONS
+# INTER-THEME CONNECTIONS (dashed, with relationship label)
 # ============================================================
 
 for t1_id, t2_id, label in inter_theme_links:
     n1 = theme_nodes[t1_id]
     n2 = theme_nodes[t2_id]
-    p1 = edge_point(n1[0], n1[1], n1[2], n1[3], n2[0], n2[1], "ellipse")
-    p2 = edge_point(n2[0], n2[1], n2[2], n2[3], n1[0], n1[1], "ellipse")
-    
-    pdf.save_state()
-    pdf.set_stroke_color(0.75, 0.22, 0.17)
-    pdf.set_line_width(0.9)
-    pdf.set_dash(4, 2)
-    pdf.draw_line(p1[0], p1[1], p2[0], p2[1])
-    pdf.clear_dash()
-    pdf.set_color(0.75, 0.22, 0.17)
-    pdf.draw_arrow(p1[0], p1[1], p2[0], p2[1], size=4)
-    pdf.restore_state()
-    
-    # Label
-    mx = (p1[0] + p2[0]) / 2
-    my = (p1[1] + p2[1]) / 2
-    lw = len(label) * 3.5 + 8
-    pdf.save_state()
-    pdf.set_color(1.0, 0.96, 0.96)
-    pdf.set_stroke_color(0.75, 0.22, 0.17)
-    pdf.set_line_width(0.3)
-    pdf.draw_rounded_rect(mx - lw/2, my - 5, lw, 9, 2, fill=True, stroke=True)
-    pdf.set_color(0.75, 0.14, 0.11)
-    pdf.draw_text_centered(mx, my, label, size=4.5)
-    pdf.restore_state()
+    p1 = edge_pt(n1[0], n1[1], n1[2], n1[3], n2[0], n2[1])
+    p2 = edge_pt(n2[0], n2[1], n2[2], n2[3], n1[0], n1[1])
+    draw_link(p1[0], p1[1], p2[0], p2[1], label,
+              color=(0.7, 0.2, 0.15), lw=0.7, dashed=True)
+
+# ============================================================
+# LEGEND (bottom-right corner, compact)
+# ============================================================
+
+lx, ly = PW - 200, PH - 70
+pdf.save_state()
+pdf.set_color(0.98, 0.98, 0.98)
+pdf.set_stroke_color(0.8, 0.8, 0.8)
+pdf.set_line_width(0.4)
+pdf.draw_rounded_rect(lx, ly, 185, 55, 3, fill=True, stroke=True)
+pdf.set_color(0.15, 0.15, 0.15)
+pdf.draw_text(lx + 5, ly + 10, "Legenda:", size=5.5, bold=True)
+# Theme
+pdf.set_color(1.0, 0.92, 0.55)
+pdf.set_stroke_color(0.5, 0.5, 0.5)
+pdf.draw_rounded_rect(lx+5, ly+16, 20, 8, 2, fill=True, stroke=True)
+pdf.set_color(0.15, 0.15, 0.15)
+pdf.draw_text(lx+30, ly+22, "= Tema (Theme)", size=5)
+# Axial
+pdf.set_color(0.9, 0.95, 0.98)
+pdf.draw_rounded_rect(lx+5, ly+28, 20, 8, 2, fill=True, stroke=True)
+pdf.set_color(0.15, 0.15, 0.15)
+pdf.draw_text(lx+30, ly+34, "= Axial Code (Kategori)", size=5)
+# Open code
+pdf.set_color(1, 1, 1)
+pdf.draw_rounded_rect(lx+5, ly+40, 20, 8, 2, fill=True, stroke=True)
+pdf.set_color(0.15, 0.15, 0.15)
+pdf.draw_text(lx+30, ly+46, "= Open Code", size=5)
+# Dashed line
+pdf.set_stroke_color(0.7, 0.2, 0.15)
+pdf.set_line_width(0.6)
+pdf.set_dash(3, 2)
+pdf.draw_line(lx+100, ly+10, lx+125, ly+10)
+pdf.clear_dash()
+pdf.set_color(0.15, 0.15, 0.15)
+pdf.draw_text(lx+130, ly+12, "= Relasi antar Tema", size=5)
+pdf.restore_state()
 
 # Footer
 pdf.set_color(0.5, 0.5, 0.5)
-pdf.draw_text_centered(PAGE_W/2, PAGE_H - 18, 
-    "Network View Diagram | Open Coding - Axial Coding - Thematic Coding", size=6)
-pdf.draw_text_centered(PAGE_W/2, PAGE_H - 9,
+pdf.draw_text_centered(PW/2, PH - 12,
     "Sumber: Wawancara KS, WK6, WK2, OS | SD Negeri 04 Jatigunung | Peneliti: Ridwan Alif Adi Nugraha", size=5.5)
 
 # ============================================================
-# SAVE
+# SAVE PDF
 # ============================================================
-
 pdf_bytes = pdf.build()
 with open("Network_View_Diagram_ATLASti.pdf", "wb") as f:
     f.write(pdf_bytes)
 
-print("PDF Network View Diagram created!")
-print(f"  File: Network_View_Diagram_ATLASti.pdf")
-print(f"  Size: A3 Landscape ({PAGE_W:.0f} x {PAGE_H:.0f} pt)")
-print(f"  Themes: {len(themes_data)}")
+print("OK - Network View Diagram (ATLAS.ti style) created!")
+print(f"  Output: Network_View_Diagram_ATLASti.pdf")
+print(f"  Format: A3 Landscape ({PW:.0f} x {PH:.0f} pt)")
 total_axial = sum(len(t['axial']) for t in themes_data)
 total_open = sum(len(a['codes']) for t in themes_data for a in t['axial'])
-print(f"  Axial Codes: {total_axial}")
-print(f"  Open Codes: {total_open}")
+print(f"  Content: {len(themes_data)} Themes, {total_axial} Axial Codes, {total_open} Open Codes")
