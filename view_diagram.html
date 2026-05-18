@@ -1,0 +1,116 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Network View Diagram - ATLAS.ti Style</title>
+    <style>
+        * { margin: 0; padding: 0; box-sizing: border-box; }
+        body { 
+            background: #f0f0f0; 
+            font-family: 'Segoe UI', Arial, sans-serif;
+            overflow: hidden;
+        }
+        .toolbar {
+            position: fixed;
+            top: 0;
+            left: 0;
+            right: 0;
+            background: #2C3E50;
+            color: white;
+            padding: 8px 20px;
+            display: flex;
+            align-items: center;
+            gap: 15px;
+            z-index: 100;
+            box-shadow: 0 2px 5px rgba(0,0,0,0.2);
+        }
+        .toolbar h1 { font-size: 14px; font-weight: 600; }
+        .toolbar button {
+            background: #3498DB;
+            color: white;
+            border: none;
+            padding: 5px 12px;
+            border-radius: 4px;
+            cursor: pointer;
+            font-size: 12px;
+        }
+        .toolbar button:hover { background: #2980B9; }
+        .toolbar span { font-size: 11px; color: #bbb; }
+        .container {
+            margin-top: 40px;
+            width: 100vw;
+            height: calc(100vh - 40px);
+            overflow: auto;
+            cursor: grab;
+        }
+        .container:active { cursor: grabbing; }
+        .container img, .container object {
+            display: block;
+            min-width: 100%;
+            height: auto;
+        }
+    </style>
+</head>
+<body>
+    <div class="toolbar">
+        <h1>Network View Diagram - Koding Wawancara Kualitatif</h1>
+        <button onclick="zoomIn()">Zoom +</button>
+        <button onclick="zoomOut()">Zoom -</button>
+        <button onclick="resetZoom()">Fit</button>
+        <span id="zoom-level">100%</span>
+    </div>
+    <div class="container" id="container">
+        <object data="Network_View_Diagram_ATLASti.svg" type="image/svg+xml" id="svg-obj" style="width:100%;"></object>
+    </div>
+    <script>
+        let zoom = 100;
+        const obj = document.getElementById('svg-obj');
+        const container = document.getElementById('container');
+        
+        function zoomIn() {
+            zoom = Math.min(zoom + 20, 300);
+            obj.style.width = zoom + '%';
+            document.getElementById('zoom-level').textContent = zoom + '%';
+        }
+        function zoomOut() {
+            zoom = Math.max(zoom - 20, 40);
+            obj.style.width = zoom + '%';
+            document.getElementById('zoom-level').textContent = zoom + '%';
+        }
+        function resetZoom() {
+            zoom = 100;
+            obj.style.width = '100%';
+            document.getElementById('zoom-level').textContent = '100%';
+            container.scrollTo(0, 0);
+        }
+        
+        // Drag to pan
+        let isDragging = false, startX, startY, scrollL, scrollT;
+        container.addEventListener('mousedown', e => {
+            isDragging = true;
+            startX = e.pageX - container.offsetLeft;
+            startY = e.pageY - container.offsetTop;
+            scrollL = container.scrollLeft;
+            scrollT = container.scrollTop;
+        });
+        container.addEventListener('mousemove', e => {
+            if (!isDragging) return;
+            e.preventDefault();
+            const x = e.pageX - container.offsetLeft;
+            const y = e.pageY - container.offsetTop;
+            container.scrollLeft = scrollL - (x - startX);
+            container.scrollTop = scrollT - (y - startY);
+        });
+        container.addEventListener('mouseup', () => isDragging = false);
+        container.addEventListener('mouseleave', () => isDragging = false);
+        
+        // Mouse wheel zoom
+        container.addEventListener('wheel', e => {
+            e.preventDefault();
+            if (e.deltaY < 0) zoomIn();
+            else zoomOut();
+        });
+    </script>
+</body>
+</html>
