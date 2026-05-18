@@ -1,0 +1,189 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 2977 2105" width="2977" height="2105">
+<defs>
+<marker id="ar" markerWidth="8" markerHeight="6" refX="7" refY="3" orient="auto"><polygon points="0 0,8 3,0 6" fill="#B33326"/></marker>
+<marker id="ab" markerWidth="7" markerHeight="5" refX="6" refY="2.5" orient="auto"><polygon points="0 0,7 2.5,0 5" fill="#555"/></marker>
+</defs>
+<rect width="2977" height="2105" fill="#FFFFFF"/>
+<text x="1488.5" y="70.0" text-anchor="middle" font-family="Helvetica, Arial, sans-serif" font-size="40.0" font-weight="bold" fill="#222">NETWORK VIEW</text>
+<text x="1488.5" y="105.0" text-anchor="middle" font-family="Helvetica, Arial, sans-serif" font-size="17.5" fill="#555">Pengembangan Sistem Informasi Pemantauan Perilaku Siswa Berbasis Website dalam Mendukung Manajemen Pembinaan Karakter di Sekolah Dasar</text>
+<rect x="443.8" y="481.6" width="362.5" height="86.9" rx="6" ry="6" fill="#FFE84D" stroke="#C7A600" stroke-width="3.75"/><text text-anchor="middle" font-family="Helvetica, Arial, sans-serif" font-size="18.75" font-weight="bold" fill="#222"><tspan x="625.0" y="513.3">Keterbatasan Sistem Pencatatan</tspan><tspan x="625.0" y="536.7">Perilaku Siswa yang Berjalan</tspan></text>
+<rect x="301.1" y="723.6" width="188.2" height="62.5" rx="6" ry="6" fill="#F5F9FF" stroke="#C7A600" stroke-width="2.0"/><text text-anchor="middle" font-family="Helvetica, Arial, sans-serif" font-size="15.0" font-weight="bold" fill="#222"><tspan x="395.1902961143721" y="745.4">Pencatatan perilaku</tspan><tspan x="395.1902961143721" y="764.2">berbasis manual</tspan></text>
+<line x1="581.6" y1="568.4" x2="426.4" y2="723.6" stroke="#C7A600" stroke-width="1.75" marker-end="url(#ab)"/>
+<rect x="452.8" y="634.7" width="102.5" height="20.0" fill="#fff" stroke="none"/>
+<text x="504.0" y="649.7" text-anchor="middle" font-family="Helvetica, Arial, sans-serif" font-size="12.5" fill="#C7A600">is part of</text>
+<rect x="364.6" y="904.8" width="140.5" height="30.6" rx="6" ry="6" fill="#FFFFFF" stroke="#999" stroke-width="1.25"/><text text-anchor="middle" font-family="Helvetica, Arial, sans-serif" font-size="12.5" font-weight="normal" fill="#222"><tspan x="434.876007969876" y="920.1">Pencatatan manual</tspan></text>
+<line x1="402.7" y1="786.1" x2="431.2" y2="904.8" stroke="#CCC" stroke-width="1.0"/>
+<rect x="265.5" y="927.2" width="153.5" height="30.6" rx="6" ry="6" fill="#FFFFFF" stroke="#999" stroke-width="1.25"/><text text-anchor="middle" font-family="Helvetica, Arial, sans-serif" font-size="12.5" font-weight="normal" fill="#222"><tspan x="342.2594083906826" y="942.5">Buku absensi/jurnal</tspan></text>
+<line x1="386.4" y1="786.1" x2="346.6" y2="927.2" stroke="#CCC" stroke-width="1.0"/>
+<rect x="221.0" y="859.7" width="108.0" height="30.6" rx="6" ry="6" fill="#FFFFFF" stroke="#999" stroke-width="1.25"/><text text-anchor="middle" font-family="Helvetica, Arial, sans-serif" font-size="12.5" font-weight="normal" fill="#222"><tspan x="274.982143312659" y="875.0">Buku anekdot</tspan></text>
+<line x1="363.9" y1="786.1" x2="290.3" y2="859.7" stroke="#CCC" stroke-width="1.0"/>
+<rect x="130.8" y="792.4" width="153.5" height="30.6" rx="6" ry="6" fill="#FFFFFF" stroke="#999" stroke-width="1.25"/><text text-anchor="middle" font-family="Helvetica, Arial, sans-serif" font-size="12.5" font-weight="normal" fill="#222"><tspan x="207.51152500591087" y="807.7">Guru kelas PJ utama</tspan></text>
+<line x1="301.1" y1="781.3" x2="261.8" y2="792.4" stroke="#CCC" stroke-width="1.0"/>
+<rect x="127.1" y="699.8" width="205.5" height="30.6" rx="6" ry="6" fill="#FFFFFF" stroke="#999" stroke-width="1.25"/><text text-anchor="middle" font-family="Helvetica, Arial, sans-serif" font-size="12.5" font-weight="normal" fill="#222"><tspan x="229.88740964676705" y="715.1">Data perilaku belum digital</tspan></text>
+<line x1="301.1" y1="732.2" x2="293.7" y2="730.4" stroke="#CCC" stroke-width="1.0"/>
+<rect x="213.7" y="493.8" width="172.6" height="62.5" rx="6" ry="6" fill="#F5F9FF" stroke="#C7A600" stroke-width="2.0"/><text text-anchor="middle" font-family="Helvetica, Arial, sans-serif" font-size="15.0" font-weight="bold" fill="#222"><tspan x="300.0" y="515.6">Format pencatatan</tspan><tspan x="300.0" y="534.4">tidak terstandar</tspan></text>
+<line x1="443.8" y1="525.0" x2="386.3" y2="525.0" stroke="#C7A600" stroke-width="1.75" marker-end="url(#ab)"/>
+<rect x="363.8" y="513.8" width="102.5" height="20.0" fill="#fff" stroke="none"/>
+<text x="415.0" y="528.8" text-anchor="middle" font-family="Helvetica, Arial, sans-serif" font-size="12.5" fill="#C7A600">is part of</text>
+<rect x="131.2" y="654.6" width="160.0" height="30.6" rx="6" ry="6" fill="#FFFFFF" stroke="#999" stroke-width="1.25"/><text text-anchor="middle" font-family="Helvetica, Arial, sans-serif" font-size="12.5" font-weight="normal" fill="#222"><tspan x="211.1752439982887" y="669.9">Format tidak seragam</tspan></text>
+<line x1="280.8" y1="556.2" x2="220.6" y2="654.6" stroke="#CCC" stroke-width="1.0"/>
+<rect x="19.9" y="574.8" width="192.5" height="30.6" rx="6" ry="6" fill="#FFFFFF" stroke="#999" stroke-width="1.25"/><text text-anchor="middle" font-family="Helvetica, Arial, sans-serif" font-size="12.5" font-weight="normal" fill="#222"><tspan x="116.18490923702524" y="590.1">Bergantung kebiasaan guru</tspan></text>
+<line x1="213.7" y1="555.6" x2="159.4" y2="574.8" stroke="#CCC" stroke-width="1.0"/>
+<rect x="69.5" y="452.9" width="140.5" height="30.6" rx="6" ry="6" fill="#FFFFFF" stroke="#999" stroke-width="1.25"/><text text-anchor="middle" font-family="Helvetica, Arial, sans-serif" font-size="12.5" font-weight="normal" fill="#222"><tspan x="139.75094651432966" y="468.3">Format tidak baku</tspan></text>
+<line x1="213.7" y1="494.4" x2="183.0" y2="483.6" stroke="#CCC" stroke-width="1.0"/>
+<rect x="98.6" y="343.4" width="199.0" height="30.6" rx="6" ry="6" fill="#FFFFFF" stroke="#999" stroke-width="1.25"/><text text-anchor="middle" font-family="Helvetica, Arial, sans-serif" font-size="12.5" font-weight="normal" fill="#222"><tspan x="198.11277988039" y="358.7">Keterlambatan belum detail</tspan></text>
+<line x1="280.8" y1="493.8" x2="207.5" y2="374.0" stroke="#CCC" stroke-width="1.0"/>
+<rect x="269.9" y="263.9" width="250.6" height="62.5" rx="6" ry="6" fill="#F5F9FF" stroke="#C7A600" stroke-width="2.0"/><text text-anchor="middle" font-family="Helvetica, Arial, sans-serif" font-size="15.0" font-weight="bold" fill="#222"><tspan x="395.190296114372" y="285.8">Keterbatasan dokumentasi</tspan><tspan x="395.190296114372" y="304.6">perilaku positif &amp; prestasi</tspan></text>
+<line x1="581.6" y1="481.6" x2="426.4" y2="326.4" stroke="#C7A600" stroke-width="1.75" marker-end="url(#ab)"/>
+<rect x="452.8" y="392.8" width="102.5" height="20.0" fill="#fff" stroke="none"/>
+<text x="504.0" y="407.8" text-anchor="middle" font-family="Helvetica, Arial, sans-serif" font-size="12.5" fill="#C7A600">is part of</text>
+<rect x="138.7" y="272.1" width="173.0" height="46.2" rx="6" ry="6" fill="#FFFFFF" stroke="#999" stroke-width="1.25"/><text text-anchor="middle" font-family="Helvetica, Arial, sans-serif" font-size="12.5" font-weight="normal" fill="#222"><tspan x="225.19029611437202" y="287.4">Perilaku positif belum</tspan><tspan x="225.19029611437202" y="303.0">terdokumentasi</tspan></text>
+<line x1="269.9" y1="295.2" x2="311.7" y2="295.2" stroke="#CCC" stroke-width="1.0"/>
+<rect x="167.6" y="134.2" width="179.5" height="46.2" rx="6" ry="6" fill="#FFFFFF" stroke="#999" stroke-width="1.25"/><text text-anchor="middle" font-family="Helvetica, Arial, sans-serif" font-size="12.5" font-weight="normal" fill="#222"><tspan x="257.3044737829953" y="149.5">Belum ada tempat khusus</tspan><tspan x="257.3044737829953" y="165.1">perilaku positif</tspan></text>
+<line x1="363.9" y1="263.9" x2="280.4" y2="180.4" stroke="#CCC" stroke-width="1.0"/>
+<rect x="324.9" y="109.9" width="140.5" height="30.6" rx="6" ry="6" fill="#FFFFFF" stroke="#999" stroke-width="1.25"/><text text-anchor="middle" font-family="Helvetica, Arial, sans-serif" font-size="12.5" font-weight="normal" fill="#222"><tspan x="395.190296114372" y="125.2">Fokus pelanggaran</tspan></text>
+<line x1="395.2" y1="263.9" x2="395.2" y2="140.5" stroke="#CCC" stroke-width="1.0"/>
+<rect x="523.1" y="168.8" width="203.8" height="62.5" rx="6" ry="6" fill="#F5F9FF" stroke="#C7A600" stroke-width="2.0"/><text text-anchor="middle" font-family="Helvetica, Arial, sans-serif" font-size="15.0" font-weight="bold" fill="#222"><tspan x="624.9999999999999" y="190.6">Kesulitan pengelolaan</tspan><tspan x="624.9999999999999" y="209.4">dan pencarian data</tspan></text>
+<line x1="625.0" y1="481.6" x2="625.0" y2="231.2" stroke="#C7A600" stroke-width="1.75" marker-end="url(#ab)"/>
+<rect x="573.8" y="345.2" width="102.5" height="20.0" fill="#fff" stroke="none"/>
+<text x="625.0" y="360.2" text-anchor="middle" font-family="Helvetica, Arial, sans-serif" font-size="12.5" fill="#C7A600">is part of</text>
+<rect x="422.8" y="95.9" width="114.5" height="30.6" rx="6" ry="6" fill="#FFFFFF" stroke="#999" stroke-width="1.25"/><text text-anchor="middle" font-family="Helvetica, Arial, sans-serif" font-size="12.5" font-weight="normal" fill="#222"><tspan x="480.0511720598042" y="111.2">Data tersebar</tspan></text>
+<line x1="574.0" y1="168.8" x2="505.0" y2="126.5" stroke="#CCC" stroke-width="1.0"/>
+<rect x="489.7" y="0.9" width="140.5" height="30.6" rx="6" ry="6" fill="#FFFFFF" stroke="#999" stroke-width="1.25"/><text text-anchor="middle" font-family="Helvetica, Arial, sans-serif" font-size="12.5" font-weight="normal" fill="#222"><tspan x="559.9076624494145" y="16.2">Data sulit dicari</tspan></text>
+<line x1="613.9" y1="168.8" x2="565.3" y2="31.5" stroke="#CCC" stroke-width="1.0"/>
+<rect x="592.0" y="24.4" width="179.5" height="30.6" rx="6" ry="6" fill="#FFFFFF" stroke="#999" stroke-width="1.25"/><text text-anchor="middle" font-family="Helvetica, Arial, sans-serif" font-size="12.5" font-weight="normal" fill="#222"><tspan x="681.7471660697408" y="39.8">Data rawan hilang/rusak</tspan></text>
+<line x1="636.1" y1="168.8" x2="676.3" y2="55.1" stroke="#CCC" stroke-width="1.0"/>
+<rect x="721.0" y="82.8" width="140.5" height="30.6" rx="6" ry="6" fill="#FFFFFF" stroke="#999" stroke-width="1.25"/><text text-anchor="middle" font-family="Helvetica, Arial, sans-serif" font-size="12.5" font-weight="normal" fill="#222"><tspan x="791.2648320490478" y="98.1">Rekapitulasi lama</tspan></text>
+<line x1="676.0" y1="168.8" x2="766.3" y2="113.4" stroke="#CCC" stroke-width="1.0"/>
+<rect x="2163.9" y="481.6" width="372.2" height="86.9" rx="6" ry="6" fill="#B9E0FF" stroke="#2471A3" stroke-width="3.75"/><text text-anchor="middle" font-family="Helvetica, Arial, sans-serif" font-size="18.75" font-weight="bold" fill="#222"><tspan x="2350.0" y="513.3">Ketidakefisienan Alur Pelaporan</tspan><tspan x="2350.0" y="536.7">dan Komunikasi</tspan></text>
+<rect x="2600.4" y="493.8" width="149.2" height="62.5" rx="6" ry="6" fill="#F5F9FF" stroke="#2471A3" stroke-width="2.0"/><text text-anchor="middle" font-family="Helvetica, Arial, sans-serif" font-size="15.0" font-weight="bold" fill="#222"><tspan x="2675.0" y="515.6">Alur pelaporan</tspan><tspan x="2675.0" y="534.4">tidak efisien</tspan></text>
+<line x1="2536.1" y1="525.0" x2="2600.4" y2="525.0" stroke="#2471A3" stroke-width="1.75" marker-end="url(#ab)"/>
+<rect x="2517.0" y="513.8" width="102.5" height="20.0" fill="#fff" stroke="none"/>
+<text x="2568.3" y="528.8" text-anchor="middle" font-family="Helvetica, Arial, sans-serif" font-size="12.5" fill="#2471A3">is part of</text>
+<rect x="2661.1" y="364.7" width="205.5" height="30.6" rx="6" ry="6" fill="#FFFFFF" stroke="#999" stroke-width="1.25"/><text text-anchor="middle" font-family="Helvetica, Arial, sans-serif" font-size="12.5" font-weight="normal" fill="#222"><tspan x="2763.824756001711" y="380.1">Alur pelaporan konvensional</tspan></text>
+<line x1="2694.2" y1="493.8" x2="2754.4" y2="395.4" stroke="#CCC" stroke-width="1.0"/>
+<rect x="2775.6" y="436.8" width="166.5" height="46.2" rx="6" ry="6" fill="#FFFFFF" stroke="#999" stroke-width="1.25"/><text text-anchor="middle" font-family="Helvetica, Arial, sans-serif" font-size="12.5" font-weight="normal" fill="#222"><tspan x="2858.8150907629747" y="452.1">Pengawasan manajerial</tspan><tspan x="2858.8150907629747" y="467.7">kurang praktis</tspan></text>
+<line x1="2749.6" y1="498.6" x2="2793.5" y2="483.0" stroke="#CCC" stroke-width="1.0"/>
+<rect x="2758.5" y="566.4" width="153.5" height="30.6" rx="6" ry="6" fill="#FFFFFF" stroke="#999" stroke-width="1.25"/><text text-anchor="middle" font-family="Helvetica, Arial, sans-serif" font-size="12.5" font-weight="normal" fill="#222"><tspan x="2835.24905348567" y="581.7">Data tidak terpusat</tspan></text>
+<line x1="2749.6" y1="551.4" x2="2792.0" y2="566.4" stroke="#CCC" stroke-width="1.0"/>
+<rect x="2693.6" y="676.0" width="166.5" height="30.6" rx="6" ry="6" fill="#FFFFFF" stroke="#999" stroke-width="1.25"/><text text-anchor="middle" font-family="Helvetica, Arial, sans-serif" font-size="12.5" font-weight="normal" fill="#222"><tspan x="2776.88722011961" y="691.3">Pelaporan situasional</tspan></text>
+<line x1="2694.2" y1="556.2" x2="2767.5" y2="676.0" stroke="#CCC" stroke-width="1.0"/>
+<rect x="2481.8" y="263.9" width="196.0" height="62.5" rx="6" ry="6" fill="#F5F9FF" stroke="#2471A3" stroke-width="2.0"/><text text-anchor="middle" font-family="Helvetica, Arial, sans-serif" font-size="15.0" font-weight="bold" fill="#222"><tspan x="2579.809703885628" y="285.8">Komunikasi orang tua</tspan><tspan x="2579.809703885628" y="304.6">bersifat insidental</tspan></text>
+<line x1="2393.4" y1="481.6" x2="2548.6" y2="326.4" stroke="#2471A3" stroke-width="1.75" marker-end="url(#ab)"/>
+<rect x="2419.7" y="392.8" width="102.5" height="20.0" fill="#fff" stroke="none"/>
+<text x="2471.0" y="407.8" text-anchor="middle" font-family="Helvetica, Arial, sans-serif" font-size="12.5" fill="#2471A3">is part of</text>
+<rect x="2437.4" y="114.6" width="205.5" height="30.6" rx="6" ry="6" fill="#FFFFFF" stroke="#999" stroke-width="1.25"/><text text-anchor="middle" font-family="Helvetica, Arial, sans-serif" font-size="12.5" font-weight="normal" fill="#222"><tspan x="2540.123992030124" y="129.9">Komunikasi orang tua manual</tspan></text>
+<line x1="2572.3" y1="263.9" x2="2543.8" y2="145.2" stroke="#CCC" stroke-width="1.0"/>
+<rect x="2587.0" y="96.1" width="153.5" height="46.2" rx="6" ry="6" fill="#FFFFFF" stroke="#999" stroke-width="1.25"/><text text-anchor="middle" font-family="Helvetica, Arial, sans-serif" font-size="12.5" font-weight="normal" fill="#222"><tspan x="2663.759367763246" y="111.4">Informasi terlambat</tspan><tspan x="2663.759367763246" y="127.0">ke orang tua</tspan></text>
+<line x1="2594.7" y1="263.9" x2="2652.7" y2="142.3" stroke="#CCC" stroke-width="1.0"/>
+<rect x="2643.5" y="206.7" width="179.5" height="30.6" rx="6" ry="6" fill="#FFFFFF" stroke="#999" stroke-width="1.25"/><text text-anchor="middle" font-family="Helvetica, Arial, sans-serif" font-size="12.5" font-weight="normal" fill="#222"><tspan x="2733.2492022251045" y="222.0">Notifikasi perlu diatur</tspan></text>
+<line x1="2645.3" y1="263.9" x2="2701.1" y2="237.3" stroke="#CCC" stroke-width="1.0"/>
+<rect x="2695.9" y="317.6" width="147.0" height="46.2" rx="6" ry="6" fill="#FFFFFF" stroke="#999" stroke-width="1.25"/><text text-anchor="middle" font-family="Helvetica, Arial, sans-serif" font-size="12.5" font-weight="normal" fill="#222"><tspan x="2769.421838363175" y="332.9">Kendala komunikasi</tspan><tspan x="2769.421838363175" y="348.5">orang tua</tspan></text>
+<line x1="2677.8" y1="318.7" x2="2695.9" y2="323.1" stroke="#CCC" stroke-width="1.0"/>
+<rect x="434.0" y="1581.6" width="382.0" height="86.9" rx="6" ry="6" fill="#B8F0C8" stroke="#1E8449" stroke-width="3.75"/><text text-anchor="middle" font-family="Helvetica, Arial, sans-serif" font-size="18.75" font-weight="bold" fill="#222"><tspan x="625.0" y="1613.3">Penghargaan &amp; Pembinaan Karakter</tspan><tspan x="625.0" y="1636.7">Belum Terdokumentasi Sistematis</tspan></text>
+<rect x="213.7" y="1593.8" width="172.6" height="62.5" rx="6" ry="6" fill="#F5F9FF" stroke="#1E8449" stroke-width="2.0"/><text text-anchor="middle" font-family="Helvetica, Arial, sans-serif" font-size="15.0" font-weight="bold" fill="#222"><tspan x="300.0" y="1615.6">Penghargaan belum</tspan><tspan x="300.0" y="1634.4">terstruktur</tspan></text>
+<line x1="434.0" y1="1625.0" x2="386.3" y2="1625.0" stroke="#1E8449" stroke-width="1.75" marker-end="url(#ab)"/>
+<rect x="358.9" y="1613.8" width="102.5" height="20.0" fill="#fff" stroke="none"/>
+<text x="410.1" y="1628.8" text-anchor="middle" font-family="Helvetica, Arial, sans-serif" font-size="12.5" fill="#1E8449">is part of</text>
+<rect x="127.9" y="1754.6" width="166.5" height="30.6" rx="6" ry="6" fill="#FFFFFF" stroke="#999" stroke-width="1.25"/><text text-anchor="middle" font-family="Helvetica, Arial, sans-serif" font-size="12.5" font-weight="normal" fill="#222"><tspan x="211.1752439982887" y="1769.9">Penghargaan sederhana</tspan></text>
+<line x1="280.8" y1="1656.2" x2="220.6" y2="1754.6" stroke="#CCC" stroke-width="1.0"/>
+<rect x="45.9" y="1667.0" width="140.5" height="46.2" rx="6" ry="6" fill="#FFFFFF" stroke="#999" stroke-width="1.25"/><text text-anchor="middle" font-family="Helvetica, Arial, sans-serif" font-size="12.5" font-weight="normal" fill="#222"><tspan x="116.18490923702524" y="1682.3">Penghargaan belum</tspan><tspan x="116.18490923702524" y="1697.9">terdokumentasi</tspan></text>
+<line x1="213.7" y1="1655.6" x2="181.5" y2="1667.0" stroke="#CCC" stroke-width="1.0"/>
+<rect x="79.3" y="1552.9" width="121.0" height="30.6" rx="6" ry="6" fill="#FFFFFF" stroke="#999" stroke-width="1.25"/><text text-anchor="middle" font-family="Helvetica, Arial, sans-serif" font-size="12.5" font-weight="normal" fill="#222"><tspan x="139.75094651432966" y="1568.3">Reward spontan</tspan></text>
+<line x1="213.7" y1="1594.4" x2="183.0" y2="1583.6" stroke="#CCC" stroke-width="1.0"/>
+<rect x="108.4" y="1435.6" width="179.5" height="46.2" rx="6" ry="6" fill="#FFFFFF" stroke="#999" stroke-width="1.25"/><text text-anchor="middle" font-family="Helvetica, Arial, sans-serif" font-size="12.5" font-weight="normal" fill="#222"><tspan x="198.11277988039" y="1450.9">Penghargaan terstruktur</tspan><tspan x="198.11277988039" y="1466.5">belum berjalan</tspan></text>
+<line x1="280.8" y1="1593.8" x2="212.3" y2="1481.9" stroke="#CCC" stroke-width="1.0"/>
+<rect x="273.8" y="1363.9" width="242.8" height="62.5" rx="6" ry="6" fill="#F5F9FF" stroke="#1E8449" stroke-width="2.0"/><text text-anchor="middle" font-family="Helvetica, Arial, sans-serif" font-size="15.0" font-weight="bold" fill="#222"><tspan x="395.190296114372" y="1385.8">Pembinaan karakter melalui</tspan><tspan x="395.190296114372" y="1404.6">pembiasaan harian</tspan></text>
+<line x1="581.6" y1="1581.6" x2="426.4" y2="1426.4" stroke="#1E8449" stroke-width="1.75" marker-end="url(#ab)"/>
+<rect x="452.8" y="1492.8" width="102.5" height="20.0" fill="#fff" stroke="none"/>
+<text x="504.0" y="1507.8" text-anchor="middle" font-family="Helvetica, Arial, sans-serif" font-size="12.5" fill="#1E8449">is part of</text>
+<rect x="133.6" y="1419.6" width="192.5" height="30.6" rx="6" ry="6" fill="#FFFFFF" stroke="#999" stroke-width="1.25"/><text text-anchor="middle" font-family="Helvetica, Arial, sans-serif" font-size="12.5" font-weight="normal" fill="#222"><tspan x="229.887409646767" y="1434.9">Pembinaan karakter harian</tspan></text>
+<line x1="273.8" y1="1424.3" x2="293.7" y2="1419.6" stroke="#CCC" stroke-width="1.0"/>
+<rect x="140.5" y="1326.9" width="134.0" height="30.6" rx="6" ry="6" fill="#FFFFFF" stroke="#999" stroke-width="1.25"/><text text-anchor="middle" font-family="Helvetica, Arial, sans-serif" font-size="12.5" font-weight="normal" fill="#222"><tspan x="207.5115250059108" y="1342.3">Teguran bertahap</tspan></text>
+<line x1="284.4" y1="1363.9" x2="261.8" y2="1357.6" stroke="#CCC" stroke-width="1.0"/>
+<rect x="198.2" y="1251.9" width="153.5" height="46.2" rx="6" ry="6" fill="#FFFFFF" stroke="#999" stroke-width="1.25"/><text text-anchor="middle" font-family="Helvetica, Arial, sans-serif" font-size="12.5" font-weight="normal" fill="#222"><tspan x="274.9821433126589" y="1267.2">Tindak lanjut belum</tspan><tspan x="274.9821433126589" y="1282.8">terdokumentasi</tspan></text>
+<line x1="363.9" y1="1363.9" x2="298.1" y2="1298.1" stroke="#CCC" stroke-width="1.0"/>
+<rect x="259.0" y="1184.4" width="166.5" height="46.2" rx="6" ry="6" fill="#FFFFFF" stroke="#999" stroke-width="1.25"/><text text-anchor="middle" font-family="Helvetica, Arial, sans-serif" font-size="12.5" font-weight="normal" fill="#222"><tspan x="342.2594083906825" y="1199.7">Rekam jejak pembinaan</tspan><tspan x="342.2594083906825" y="1215.3">penting</tspan></text>
+<line x1="386.4" y1="1363.9" x2="348.8" y2="1230.6" stroke="#CCC" stroke-width="1.0"/>
+<rect x="364.6" y="1206.8" width="140.5" height="46.2" rx="6" ry="6" fill="#FFFFFF" stroke="#999" stroke-width="1.25"/><text text-anchor="middle" font-family="Helvetica, Arial, sans-serif" font-size="12.5" font-weight="normal" fill="#222"><tspan x="434.8760079698759" y="1222.1">Pembinaan melalui</tspan><tspan x="434.8760079698759" y="1237.7">pembiasaan</tspan></text>
+<line x1="402.7" y1="1363.9" x2="429.3" y2="1253.0" stroke="#CCC" stroke-width="1.0"/>
+<rect x="1301.4" y="1031.6" width="372.2" height="86.9" rx="6" ry="6" fill="#FFD4C4" stroke="#C0392B" stroke-width="3.75"/><text text-anchor="middle" font-family="Helvetica, Arial, sans-serif" font-size="18.75" font-weight="bold" fill="#222"><tspan x="1487.5" y="1063.3">Kebutuhan Fitur &amp; Fungsi Sistem</tspan><tspan x="1487.5" y="1086.7">Informasi Berbasis Website</tspan></text>
+<rect x="1377.8" y="681.2" width="219.4" height="62.5" rx="6" ry="6" fill="#F5F9FF" stroke="#C0392B" stroke-width="2.0"/><text text-anchor="middle" font-family="Helvetica, Arial, sans-serif" font-size="15.0" font-weight="bold" fill="#222"><tspan x="1487.5" y="703.1">Kebutuhan fitur dan</tspan><tspan x="1487.5" y="721.9">fungsi sistem informasi</tspan></text>
+<line x1="1487.5" y1="1031.6" x2="1487.5" y2="743.8" stroke="#C0392B" stroke-width="1.75" marker-end="url(#ab)"/>
+<rect x="1436.2" y="876.4" width="102.5" height="20.0" fill="#fff" stroke="none"/>
+<text x="1487.5" y="891.4" text-anchor="middle" font-family="Helvetica, Arial, sans-serif" font-size="12.5" fill="#C0392B">is part of</text>
+<rect x="1236.1" y="644.7" width="179.5" height="30.6" rx="6" ry="6" fill="#FFFFFF" stroke="#999" stroke-width="1.25"/><text text-anchor="middle" font-family="Helvetica, Arial, sans-serif" font-size="12.5" font-weight="normal" fill="#222"><tspan x="1325.820392229824" y="660.0">Kebutuhan fitur lengkap</tspan></text>
+<line x1="1391.3" y1="681.2" x2="1372.9" y2="675.3" stroke="#CCC" stroke-width="1.0"/>
+<rect x="1236.7" y="582.6" width="186.0" height="30.6" rx="6" ry="6" fill="#FFFFFF" stroke="#999" stroke-width="1.25"/><text text-anchor="middle" font-family="Helvetica, Arial, sans-serif" font-size="12.5" font-weight="normal" fill="#222"><tspan x="1329.7416860968854" y="597.9">Kebutuhan rekap otomatis</tspan></text>
+<line x1="1444.5" y1="681.2" x2="1350.8" y2="613.2" stroke="#CCC" stroke-width="1.0"/>
+<rect x="1288.1" y="559.7" width="199.0" height="30.6" rx="6" ry="6" fill="#FFFFFF" stroke="#999" stroke-width="1.25"/><text text-anchor="middle" font-family="Helvetica, Arial, sans-serif" font-size="12.5" font-weight="normal" fill="#222"><tspan x="1387.5765071102796" y="575.0">Kebutuhan pencatatan cepat</tspan></text>
+<line x1="1464.8" y1="681.2" x2="1398.7" y2="590.3" stroke="#CCC" stroke-width="1.0"/>
+<rect x="1347.2" y="511.7" width="160.0" height="30.6" rx="6" ry="6" fill="#FFFFFF" stroke="#999" stroke-width="1.25"/><text text-anchor="middle" font-family="Helvetica, Arial, sans-serif" font-size="12.5" font-weight="normal" fill="#222"><tspan x="1427.2416860968854" y="527.0">Sistem poin otomatis</tspan></text>
+<line x1="1477.3" y1="681.2" x2="1432.2" y2="542.4" stroke="#CCC" stroke-width="1.0"/>
+<rect x="1391.2" y="527.2" width="192.5" height="30.6" rx="6" ry="6" fill="#FFFFFF" stroke="#999" stroke-width="1.25"/><text text-anchor="middle" font-family="Helvetica, Arial, sans-serif" font-size="12.5" font-weight="normal" fill="#222"><tspan x="1487.5" y="542.5">Kebutuhan fitur pencarian</tspan></text>
+<line x1="1487.5" y1="681.2" x2="1487.5" y2="557.8" stroke="#CCC" stroke-width="1.0"/>
+<rect x="1448.3" y="511.7" width="199.0" height="30.6" rx="6" ry="6" fill="#FFFFFF" stroke="#999" stroke-width="1.25"/><text text-anchor="middle" font-family="Helvetica, Arial, sans-serif" font-size="12.5" font-weight="normal" fill="#222"><tspan x="1547.7583139031149" y="527.0">Kebutuhan laporan otomatis</tspan></text>
+<line x1="1497.7" y1="681.2" x2="1542.8" y2="542.4" stroke="#CCC" stroke-width="1.0"/>
+<rect x="1494.4" y="559.7" width="186.0" height="30.6" rx="6" ry="6" fill="#FFFFFF" stroke="#999" stroke-width="1.25"/><text text-anchor="middle" font-family="Helvetica, Arial, sans-serif" font-size="12.5" font-weight="normal" fill="#222"><tspan x="1587.4234928897204" y="575.0">Pembagian akses pengguna</tspan></text>
+<line x1="1510.2" y1="681.2" x2="1576.3" y2="590.3" stroke="#CCC" stroke-width="1.0"/>
+<rect x="1555.5" y="582.6" width="179.5" height="30.6" rx="6" ry="6" fill="#FFFFFF" stroke="#999" stroke-width="1.25"/><text text-anchor="middle" font-family="Helvetica, Arial, sans-serif" font-size="12.5" font-weight="normal" fill="#222"><tspan x="1645.2583139031149" y="597.9">Kebutuhan keamanan data</tspan></text>
+<line x1="1530.5" y1="681.2" x2="1624.2" y2="613.2" stroke="#CCC" stroke-width="1.0"/>
+<rect x="1575.7" y="644.7" width="147.0" height="30.6" rx="6" ry="6" fill="#FFFFFF" stroke="#999" stroke-width="1.25"/><text text-anchor="middle" font-family="Helvetica, Arial, sans-serif" font-size="12.5" font-weight="normal" fill="#222"><tspan x="1649.179607770176" y="660.0">Tampilan sederhana</tspan></text>
+<line x1="1583.7" y1="681.2" x2="1602.1" y2="675.3" stroke="#CCC" stroke-width="1.0"/>
+<rect x="2154.1" y="1581.6" width="391.8" height="86.9" rx="6" ry="6" fill="#DECCEE" stroke="#6C3483" stroke-width="3.75"/><text text-anchor="middle" font-family="Helvetica, Arial, sans-serif" font-size="18.75" font-weight="bold" fill="#222"><tspan x="2350.0" y="1613.3">Kesiapan, Tantangan, dan Dukungan</tspan><tspan x="2350.0" y="1636.7">Implementasi Sistem</tspan></text>
+<rect x="2553.6" y="1593.8" width="242.8" height="62.5" rx="6" ry="6" fill="#F5F9FF" stroke="#6C3483" stroke-width="2.0"/><text text-anchor="middle" font-family="Helvetica, Arial, sans-serif" font-size="15.0" font-weight="bold" fill="#222"><tspan x="2675.0" y="1615.6">Ketersediaan infrastruktur</tspan><tspan x="2675.0" y="1634.4">dan kesiapan teknis</tspan></text>
+<line x1="2545.9" y1="1625.0" x2="2553.6" y2="1625.0" stroke="#6C3483" stroke-width="1.75" marker-end="url(#ab)"/>
+<rect x="2498.5" y="1613.8" width="102.5" height="20.0" fill="#fff" stroke="none"/>
+<text x="2549.7" y="1628.8" text-anchor="middle" font-family="Helvetica, Arial, sans-serif" font-size="12.5" fill="#6C3483">is part of</text>
+<rect x="2641.6" y="1464.7" width="244.5" height="30.6" rx="6" ry="6" fill="#FFFFFF" stroke="#999" stroke-width="1.25"/><text text-anchor="middle" font-family="Helvetica, Arial, sans-serif" font-size="12.5" font-weight="normal" fill="#222"><tspan x="2763.824756001711" y="1480.1">Internet tersedia tapi fluktuatif</tspan></text>
+<line x1="2694.2" y1="1593.8" x2="2754.4" y2="1495.4" stroke="#CCC" stroke-width="1.0"/>
+<rect x="2785.3" y="1544.6" width="147.0" height="30.6" rx="6" ry="6" fill="#FFFFFF" stroke="#999" stroke-width="1.25"/><text text-anchor="middle" font-family="Helvetica, Arial, sans-serif" font-size="12.5" font-weight="normal" fill="#222"><tspan x="2858.8150907629747" y="1559.9">Perangkat tersedia</tspan></text>
+<line x1="2763.2" y1="1593.8" x2="2815.6" y2="1575.2" stroke="#CCC" stroke-width="1.0"/>
+<rect x="2745.5" y="1658.6" width="179.5" height="46.2" rx="6" ry="6" fill="#FFFFFF" stroke="#999" stroke-width="1.25"/><text text-anchor="middle" font-family="Helvetica, Arial, sans-serif" font-size="12.5" font-weight="normal" fill="#222"><tspan x="2835.24905348567" y="1673.9">Literasi teknologi guru</tspan><tspan x="2835.24905348567" y="1689.6">bervariasi</tspan></text>
+<line x1="2763.2" y1="1656.2" x2="2769.9" y2="1658.6" stroke="#CCC" stroke-width="1.0"/>
+<rect x="2703.4" y="1768.1" width="147.0" height="46.2" rx="6" ry="6" fill="#FFFFFF" stroke="#999" stroke-width="1.25"/><text text-anchor="middle" font-family="Helvetica, Arial, sans-serif" font-size="12.5" font-weight="normal" fill="#222"><tspan x="2776.88722011961" y="1783.5">Belum pernah pakai</tspan><tspan x="2776.88722011961" y="1799.1">aplikasi khusus</tspan></text>
+<line x1="2694.2" y1="1656.2" x2="2762.7" y2="1768.1" stroke="#CCC" stroke-width="1.0"/>
+<rect x="2470.1" y="1363.9" width="219.4" height="62.5" rx="6" ry="6" fill="#F5F9FF" stroke="#6C3483" stroke-width="2.0"/><text text-anchor="middle" font-family="Helvetica, Arial, sans-serif" font-size="15.0" font-weight="bold" fill="#222"><tspan x="2579.809703885628" y="1385.8">Kekhawatiran &amp; hambatan</tspan><tspan x="2579.809703885628" y="1404.6">implementasi</tspan></text>
+<line x1="2393.4" y1="1581.6" x2="2548.6" y2="1426.4" stroke="#6C3483" stroke-width="1.75" marker-end="url(#ab)"/>
+<rect x="2419.7" y="1492.8" width="102.5" height="20.0" fill="#fff" stroke="none"/>
+<text x="2471.0" y="1507.8" text-anchor="middle" font-family="Helvetica, Arial, sans-serif" font-size="12.5" fill="#6C3483">is part of</text>
+<rect x="2440.6" y="1214.6" width="199.0" height="30.6" rx="6" ry="6" fill="#FFFFFF" stroke="#999" stroke-width="1.25"/><text text-anchor="middle" font-family="Helvetica, Arial, sans-serif" font-size="12.5" font-weight="normal" fill="#222"><tspan x="2540.123992030124" y="1229.9">Kekhawatiran kesiapan guru</tspan></text>
+<line x1="2572.3" y1="1363.9" x2="2543.8" y2="1245.2" stroke="#CCC" stroke-width="1.0"/>
+<rect x="2551.3" y="1203.9" width="225.0" height="30.6" rx="6" ry="6" fill="#FFFFFF" stroke="#999" stroke-width="1.25"/><text text-anchor="middle" font-family="Helvetica, Arial, sans-serif" font-size="12.5" font-weight="normal" fill="#222"><tspan x="2663.759367763246" y="1219.2">Kekhawatiran jaringan internet</tspan></text>
+<line x1="2594.7" y1="1363.9" x2="2656.5" y2="1234.5" stroke="#CCC" stroke-width="1.0"/>
+<rect x="2637.0" y="1306.7" width="192.5" height="30.6" rx="6" ry="6" fill="#FFFFFF" stroke="#999" stroke-width="1.25"/><text text-anchor="middle" font-family="Helvetica, Arial, sans-serif" font-size="12.5" font-weight="normal" fill="#222"><tspan x="2733.2492022251045" y="1322.0">Hambatan kebiasaan manual</tspan></text>
+<line x1="2645.3" y1="1363.9" x2="2701.1" y2="1337.3" stroke="#CCC" stroke-width="1.0"/>
+<rect x="2692.7" y="1417.6" width="153.5" height="46.2" rx="6" ry="6" fill="#FFFFFF" stroke="#999" stroke-width="1.25"/><text text-anchor="middle" font-family="Helvetica, Arial, sans-serif" font-size="12.5" font-weight="normal" fill="#222"><tspan x="2769.421838363175" y="1432.9">Kemampuan teknologi</tspan><tspan x="2769.421838363175" y="1448.5">tidak merata</tspan></text>
+<line x1="2689.5" y1="1421.5" x2="2692.7" y2="1422.3" stroke="#CCC" stroke-width="1.0"/>
+<rect x="2497.4" y="1823.6" width="164.8" height="62.5" rx="6" ry="6" fill="#F5F9FF" stroke="#6C3483" stroke-width="2.0"/><text text-anchor="middle" font-family="Helvetica, Arial, sans-serif" font-size="15.0" font-weight="bold" fill="#222"><tspan x="2579.809703885628" y="1845.4">Dukungan dan</tspan><tspan x="2579.809703885628" y="1864.2">kesiapan sekolah</tspan></text>
+<line x1="2393.4" y1="1668.4" x2="2548.6" y2="1823.6" stroke="#6C3483" stroke-width="1.75" marker-end="url(#ab)"/>
+<rect x="2419.7" y="1734.7" width="102.5" height="20.0" fill="#fff" stroke="none"/>
+<text x="2471.0" y="1749.7" text-anchor="middle" font-family="Helvetica, Arial, sans-serif" font-size="12.5" fill="#6C3483">is part of</text>
+<rect x="2642.4" y="1799.8" width="205.5" height="30.6" rx="6" ry="6" fill="#FFFFFF" stroke="#999" stroke-width="1.25"/><text text-anchor="middle" font-family="Helvetica, Arial, sans-serif" font-size="12.5" font-weight="normal" fill="#222"><tspan x="2745.112590353233" y="1815.1">Dukungan thd sistem website</tspan></text>
+<line x1="2662.2" y1="1835.0" x2="2681.3" y2="1830.4" stroke="#CCC" stroke-width="1.0"/>
+<rect x="2700.5" y="1892.4" width="134.0" height="30.6" rx="6" ry="6" fill="#FFFFFF" stroke="#999" stroke-width="1.25"/><text text-anchor="middle" font-family="Helvetica, Arial, sans-serif" font-size="12.5" font-weight="normal" fill="#222"><tspan x="2767.4884749940893" y="1907.7">Dukungan sekolah</tspan></text>
+<line x1="2662.2" y1="1878.0" x2="2713.2" y2="1892.4" stroke="#CCC" stroke-width="1.0"/>
+<rect x="2616.8" y="1959.7" width="166.5" height="30.6" rx="6" ry="6" fill="#FFFFFF" stroke="#999" stroke-width="1.25"/><text text-anchor="middle" font-family="Helvetica, Arial, sans-serif" font-size="12.5" font-weight="normal" fill="#222"><tspan x="2700.017856687341" y="1975.0">Implementasi bertahap</tspan></text>
+<line x1="2611.1" y1="1886.1" x2="2684.7" y2="1959.7" stroke="#CCC" stroke-width="1.0"/>
+<rect x="2539.7" y="2027.2" width="186.0" height="30.6" rx="6" ry="6" fill="#FFFFFF" stroke="#999" stroke-width="1.25"/><text text-anchor="middle" font-family="Helvetica, Arial, sans-serif" font-size="12.5" font-weight="normal" fill="#222"><tspan x="2632.7405916093176" y="2042.5">Dukungan teknis operator</tspan></text>
+<line x1="2588.6" y1="1886.1" x2="2628.4" y2="2027.2" stroke="#CCC" stroke-width="1.0"/>
+<rect x="2427.6" y="2004.8" width="225.0" height="30.6" rx="6" ry="6" fill="#FFFFFF" stroke="#999" stroke-width="1.25"/><text text-anchor="middle" font-family="Helvetica, Arial, sans-serif" font-size="12.5" font-weight="normal" fill="#222"><tspan x="2540.123992030124" y="2020.1">Sistem diterima jika sederhana</tspan></text>
+<line x1="2572.3" y1="1886.1" x2="2543.8" y2="2004.8" stroke="#CCC" stroke-width="1.0"/>
+<line x1="806.2" y1="525.0" x2="2163.9" y2="525.0" stroke="#B33326" stroke-width="2.5" stroke-dasharray="10.0,5.0" marker-end="url(#ar)"/>
+<rect x="1429.4" y="513.8" width="111.2" height="20.0" fill="#fff" stroke="none"/>
+<text x="1485.1" y="528.8" text-anchor="middle" font-family="Helvetica, Arial, sans-serif" font-size="12.5" fill="#B33326">is cause of</text>
+<line x1="693.1" y1="568.4" x2="1419.4" y2="1031.6" stroke="#B33326" stroke-width="2.5" stroke-dasharray="10.0,5.0" marker-end="url(#ar)"/>
+<rect x="1000.6" y="788.8" width="111.2" height="20.0" fill="#fff" stroke="none"/>
+<text x="1056.2" y="803.8" text-anchor="middle" font-family="Helvetica, Arial, sans-serif" font-size="12.5" fill="#B33326">is cause of</text>
+<line x1="2281.9" y1="568.4" x2="1555.6" y2="1031.6" stroke="#B33326" stroke-width="2.5" stroke-dasharray="10.0,5.0" marker-end="url(#ar)"/>
+<rect x="1863.1" y="788.8" width="111.2" height="20.0" fill="#fff" stroke="none"/>
+<text x="1918.8" y="803.8" text-anchor="middle" font-family="Helvetica, Arial, sans-serif" font-size="12.5" fill="#B33326">is cause of</text>
+<line x1="693.1" y1="1581.6" x2="1419.4" y2="1118.4" stroke="#B33326" stroke-width="2.5" stroke-dasharray="10.0,5.0" marker-end="url(#ar)"/>
+<rect x="970.0" y="1338.8" width="172.5" height="20.0" fill="#fff" stroke="none"/>
+<text x="1056.2" y="1353.8" text-anchor="middle" font-family="Helvetica, Arial, sans-serif" font-size="12.5" fill="#B33326">is associated with</text>
+<line x1="1555.6" y1="1118.4" x2="2281.9" y2="1581.6" stroke="#B33326" stroke-width="2.5" stroke-dasharray="10.0,5.0" marker-end="url(#ar)"/>
+<rect x="1832.5" y="1338.8" width="172.5" height="20.0" fill="#fff" stroke="none"/>
+<text x="1918.8" y="1353.8" text-anchor="middle" font-family="Helvetica, Arial, sans-serif" font-size="12.5" fill="#B33326">is associated with</text>
+<text x="1488.5" y="2075.0" text-anchor="middle" font-family="Helvetica, Arial, sans-serif" font-size="13.75" fill="#999">Sumber: Wawancara KS, WK6, WK2, OS | SD Negeri 04 Jatigunung | Peneliti: Ridwan Alif Adi Nugraha</text>
+</svg>
